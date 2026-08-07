@@ -166,47 +166,64 @@ You’ll start seeing the layers—and sound like a pro while doing it.
 
 ## 🧠 **AI Vignette #4: Training an AI—What Does That Even Mean?**
 
-You’ve probably heard phrases like “this model was trained on billions of data points” and thought… trained how? Is it lifting weights? Studying flashcards? Watching YouTube tutorials?
+You've probably heard phrases like "this model was trained on trillions of words" and thought… trained how? Is it lifting weights? Studying flashcards? Watching YouTube tutorials?
 
-Let’s break it down.
+Let's break it down.
 
-### 🏋️‍♂️ What Does “Training” Mean in AI?
-Training an AI model means teaching it to recognize patterns in data so it can make predictions or decisions. It’s not memorizing facts—it’s learning *how* things tend to go.
+🏋️‍♂️ What Does "Training" Mean in AI?
 
-Think of it like teaching a dog to sit. You give it examples (commands + treats), and over time, it learns the pattern: “When I hear ‘sit,’ I plop down and get a snack.”
+Training an AI model means teaching it to recognize patterns in data so it can make predictions or decisions. For simpler models, it's mostly about learning how things tend to go rather than memorizing specifics. But for today's large language models, the line blurs—they end up both learning general patterns *and* memorizing a surprising amount of specific content (facts, quotes, code syntax) along the way.
+
+Think of it like teaching a dog to sit. You give it examples (commands + treats), and over time, it learns the pattern: "When I hear 'sit,' I plop down and get a snack."
 
 AI works similarly—minus the tail wagging.
 
-### 📊 Types of Training
+📊 Types of Training
 
-#### 1. **Supervised Learning**
-- The model gets **labeled data** (e.g., pictures of cats labeled “cat”).
+**1. Supervised Learning**
+- The model gets labeled data (e.g., pictures of cats labeled "cat").
 - It learns to associate inputs with correct outputs.
 - Think: teaching with an answer key.
 
-#### 2. **Unsupervised Learning**
+**2. Unsupervised Learning**
 - No labels—just raw data.
 - The model finds patterns on its own (like grouping similar items).
 - Think: letting it explore a messy room and figure out where things belong.
 
-#### 3. **Reinforcement Learning**
-- The model learns by **trial and error**, getting rewards for good decisions.
-- Used in game-playing AIs and robotics.
+**3. Self-Supervised Learning**
+- This is how most large language models actually learn to understand language.
+- The "labels" come from the data itself—for example, the model is shown a sentence with the last word hidden, and it has to guess what comes next.
+- No human sits there labeling anything; the structure of the data does the work.
+- Think: filling in the blank on a sentence, over and over, billions of times, until you get eerily good at predicting what comes next.
+
+**4. Reinforcement Learning**
+- The model learns by trial and error, getting rewards for good decisions.
+- Used in game-playing AIs, robotics, and—relevant to tools like ChatGPT or Claude—a technique called RLHF (Reinforcement Learning from Human Feedback), where the model is nudged toward responses that people rate as more helpful or appropriate.
 - Think: teaching a toddler not to touch the stove (eventually, they learn).
 
-### 🧠 Fun Analogy: Training AI Is Like Teaching a Kid to Sort Laundry
+🔀 Real Models Mix and Match
+
+Here's the part that trips people up: modern large language models don't pick just *one* of these lanes—they typically go through **multiple stages**. First, a massive self-supervised "pretraining" phase where the model absorbs patterns from huge amounts of text. Then, additional fine-tuning stages—often involving reinforcement learning—to shape the model's behavior, tone, and helpfulness. So when someone says a model was "trained," they usually mean this whole multi-stage pipeline, not a single technique.
+
+🧠 Fun Analogy: Training AI Is Like Teaching a Kid to Sort Laundry
+
 You show them examples: socks go here, shirts go there. At first, they mess up (socks in the freezer?). But with enough examples and feedback, they get better. AI models do the same—just with way more data and fewer tantrums.
 
-### ⚙️ Behind the Scenes: Optimization
-During training, the model adjusts its internal settings (called **parameters**) to reduce errors. This process is called **optimization**, and it’s basically the AI saying:
-> “Oops, that wasn’t quite right. Let me tweak my settings and try again.”
+⚙️ Behind the Scenes: Optimization
+
+During training, the model adjusts its internal settings (called parameters) to reduce errors. This process is called optimization, and it's basically the AI saying:
+
+"Oops, that wasn't quite right. Let me tweak my settings and try again."
 
 It does this millions (or billions) of times until it gets really good at the task.
 
-### 💡 Try This:
+💡 Try This:
+
 Next time you use an AI tool, ask:
-> “What kind of training might this model have gone through?”  
-Was it supervised? Reinforced? Or just thrown into the data deep end?
+
+"What kind of training might this model have gone through?"
+
+Was it self-supervised pretraining? Fine-tuned with human feedback? Chances are, it's a mix of several—not just one.
 
 ---	
 </details>
